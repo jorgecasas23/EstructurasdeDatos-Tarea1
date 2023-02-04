@@ -128,6 +128,7 @@ matriz = {0 : [(0, 1), (5, 4), (7, 5)],
        8 : [(1, 9), (3, 8), (5, 7), (7, 6)]}
 
 def sumarValoresMatriz(matriz, par):
+    print (par)
     i = 0
     j = 0
     k = 0
