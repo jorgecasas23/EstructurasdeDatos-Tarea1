@@ -62,7 +62,7 @@ def diferenciadeListas(listaA, listaB):
     
     print (listaTemporalA)
                 
-diferenciadeListas(listaB, listaA)
+#diferenciadeListas(listaB, listaA)
 #Seccion B#
 def lecturaDatos():
     i = 0
@@ -77,7 +77,7 @@ def lecturaDatos():
         for k in range(int (tamano2)):
             lista2.append(int(input()))
         diferenciadeListas(lista1, lista2)
-lecturaDatos()
+#lecturaDatos()
 
 #Punto 4#
 N = 100
@@ -116,8 +116,27 @@ def mostrarPrimos(N):
         print (arrayPrimosSum[j])
         j+=1
 
-mostrarPrimos(N)
+#mostrarPrimos(N)
 
 #Punto 5#
+matriz = {0 : [(0, 1), (5, 4), (7, 5)],
+       1 : [(6, 4), (7, 7)],
+       2 : [(0, 2), (1, 2), (4, 9), (6, 1)],
+       4 : [(2, 8), (3, 1), (5, 7)],
+       6 : [(0, 3), (5, 6), (7, 2)],
+       7 : [(0, 4), (1, 4), (2, 7)],
+       8 : [(1, 9), (3, 8), (5, 7), (7, 6)]}
 
-
+def sumarValoresMatriz(matriz, par):
+    i = 0
+    j = 0
+    k = 0
+    l = 0
+    sumaParejas = 0
+    for i, j in par:
+        if i in matriz:
+            for k, l in matriz[i]:
+                if j == k:
+                    sumaParejas += l
+    return sumaParejas
+print(sumarValoresMatriz(matriz, [(0, 0), (8, 3), (3, 5), (7, 2), (4, 3), (4,6)]))
